@@ -48,7 +48,9 @@ exports.imagesUpload = async (req, res) => {
 
         //data fetch
         const { name, email, tags} = req.body
-        console.log(name, email, tags)
+        // console.log(name, email, tags)
+
+        // console.log("Image FIles", req.files)
 
         const file = req.files.imageFile
         console.log(file)
@@ -171,7 +173,7 @@ exports.imageSizeReducer = async (req, res) => {
         }
 
         //upload to the cloudinary
-        const response = await uploadFileToCloudinary(file, 'naruto',90);
+        const response = await uploadFileToCloudinary(file, 'naruto',40);
         console.log(response)
 
         //Entry into the db

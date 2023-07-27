@@ -45,11 +45,11 @@ fileSchema.post('save', async function (doc) {
     } catch (err) {
         console.log("Error while sending mail")
         console.error(err)
-        return res.status(500).json({
-            success: false,
-            message: "Erroe while sending mail",
-            error: err
-        })
+        // return res.status(500).json({
+        //     success: false,
+        //     message: "Erroe while sending mail",
+        //     error: err
+        // })
     }
 })
 
